@@ -21,7 +21,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       templateContent: `
-    <html>
+    <html lang="en">
       <body>
         <div id="root"></div>
       </body>
@@ -29,12 +29,11 @@ const config = {
   `
     }),
     new ModuleFederationPlugin({
-      name: 'nav',
+      name: 'navMF',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './Components.js': './src/components/Components.js',
-      './ComponentTwo.js': './src/ComponentTwo.js'
+        './NavBar.js': './src/components/navBar/NavBar.js'
       },
     })
     // Add your plugins here
@@ -60,7 +59,6 @@ const config = {
 };
 
 module.exports = () => {
-  console.log('isProduction',isProduction)
   if (isProduction) {
     config.mode = "production";
   } else {
