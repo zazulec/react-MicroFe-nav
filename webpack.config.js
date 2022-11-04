@@ -33,7 +33,7 @@ const config = {
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './NavBar.js': './src/components/navBar/NavBar.js'
+        './NavBar': './src/components/navBar/NavBar.js'
       },
     })
     // Add your plugins here
