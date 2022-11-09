@@ -6,7 +6,6 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var navMF;
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -71,13 +70,13 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "webpack/container/entry/navMF":
-/*!***********************!*\
-  !*** container entry ***!
-  \***********************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([__webpack_require__.e(\"vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_noSo-84711a\"), __webpack_require__.e(\"src_components_navBar_NavBar_js\")]).then(function() { return function() { return (__webpack_require__(/*! ./src/components/navBar/NavBar.js */ \"./src/components/navBar/NavBar.js\")); }; });\n\t}\n};\nvar get = function(module, getScope) {\n\t__webpack_require__.R = getScope;\n\tgetScope = (\n\t\t__webpack_require__.o(moduleMap, module)\n\t\t\t? moduleMap[module]()\n\t\t\t: Promise.resolve().then(function() {\n\t\t\t\tthrow new Error('Module \"' + module + '\" does not exist in container.');\n\t\t\t})\n\t);\n\t__webpack_require__.R = undefined;\n\treturn getScope;\n};\nvar init = function(shareScope, initScope) {\n\tif (!__webpack_require__.S) return;\n\tvar name = \"default\"\n\tvar oldScope = __webpack_require__.S[name];\n\tif(oldScope && oldScope !== shareScope) throw new Error(\"Container initialization failed as it has already been initialized with a different share scope\");\n\t__webpack_require__.S[name] = shareScope;\n\treturn __webpack_require__.I(name, initScope);\n};\n\n// This exports getters to disallow modifications\n__webpack_require__.d(exports, {\n\tget: function() { return get; },\n\tinit: function() { return init; }\n});\n\n//# sourceURL=webpack://nav-micro-front/container_entry?");
+eval("__webpack_require__.r(__webpack_exports__);\n// import React from 'react';\n// import ReactDOM from 'react-dom/client';\n// import './index.css';\n// import App from './App';\n// import reportWebVitals from './reportWebVitals';\n//\n// const root = ReactDOM.createRoot(document.getElementById('root'));\n// root.render(\n//     <React.StrictMode>\n//         <App />\n//     </React.StrictMode>\n// );\n//\n// // If you want to start measuring performance in your app, pass a function\n// // to log results (for example: reportWebVitals(console.log))\n// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals\n// reportWebVitals();\n\nPromise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_noSo-84711a\"), __webpack_require__.e(\"src_bootloader_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./bootloader */ \"./src/bootloader.js\"));\n/* harmony default export */ __webpack_exports__[\"default\"] = ({});\n\n//# sourceURL=webpack://nav-micro-front/./src/index.js?");
 
 /***/ })
 
@@ -126,6 +125,36 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	!function() {
+/******/ 		var getProto = Object.getPrototypeOf ? function(obj) { return Object.getPrototypeOf(obj); } : function(obj) { return obj.__proto__; };
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach(function(key) { def[key] = function() { return value[key]; }; });
+/******/ 			}
+/******/ 			def['default'] = function() { return value; };
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -451,6 +480,8 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
+/******/ 			"webpack/sharing/consume/default/react-dom/react-dom": function() { return loadStrictSingletonVersionCheckFallback("default", "react-dom", [4,18,2,0], function() { return function() { return __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"); }; }); },
+/******/ 			"webpack/sharing/consume/default/web-vitals/web-vitals": function() { return loadStrictVersionCheckFallback("default", "web-vitals", [1,2,1,4], function() { return __webpack_require__.e("node_modules_web-vitals_dist_web-vitals_js").then(function() { return function() { return __webpack_require__(/*! web-vitals */ "./node_modules/web-vitals/dist/web-vitals.js"); }; }); }); },
 /******/ 			"webpack/sharing/consume/default/react/react": function() { return loadStrictSingletonVersionCheckFallback("default", "react", [4,18,2,0], function() { return function() { return __webpack_require__(/*! react */ "./node_modules/react/index.js"); }; }); }
 /******/ 		};
 /******/ 		var initialConsumes = ["webpack/sharing/consume/default/react/react"];
@@ -464,7 +495,14 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 				module.exports = factory();
 /******/ 			}
 /******/ 		});
-/******/ 		var chunkMapping = {};
+/******/ 		var chunkMapping = {
+/******/ 			"src_bootloader_js": [
+/******/ 				"webpack/sharing/consume/default/react-dom/react-dom"
+/******/ 			],
+/******/ 			"webpack_sharing_consume_default_web-vitals_web-vitals": [
+/******/ 				"webpack/sharing/consume/default/web-vitals/web-vitals"
+/******/ 			]
+/******/ 		};
 /******/ 		__webpack_require__.f.consumes = function(chunkId, promises) {
 /******/ 			if(__webpack_require__.o(chunkMapping, chunkId)) {
 /******/ 				chunkMapping[chunkId].forEach(function(id) {
@@ -502,7 +540,7 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"navMF": 0
+/******/ 			"main": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = function(chunkId, promises) {
@@ -514,7 +552,7 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(true) { // all chunks have JS
+/******/ 						if("webpack_sharing_consume_default_web-vitals_web-vitals" != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise(function(resolve, reject) { installedChunkData = installedChunks[chunkId] = [resolve, reject]; });
 /******/ 							promises.push(installedChunkData[2] = promise);
@@ -596,8 +634,7 @@ eval("var moduleMap = {\n\t\"./NavBar\": function() {\n\t\treturn Promise.all([_
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/navMF");
-/******/ 	navMF = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;
